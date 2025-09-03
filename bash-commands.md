@@ -1,0 +1,48 @@
+# Поиск файлов
+```bash
+find . -name "*.txt" -type f      # Найти все txt файлы
+find /var/log -size +10M          # Файлы больше 10МБ
+locate filename.txt               # Быстрый поиск по индексу
+```
+
+# Поиск текста в файлах
+```bash
+grep -r "pattern" ./folder/       # Рекурсивный поиск
+grep -n "error" log.txt           # Поиск с номерами строк
+grep -i "warning" file.txt        # Без учета регистра
+```
+
+# Фильтрация вывода
+```bash
+cat file.txt | head -20           # Первые 20 строк
+cat file.log | tail -f            # Следить за изменениями в реальном времени
+ps aux | grep nginx               # Поиск процессов
+```
+
+# Изменение прав
+```bash
+chmod 755 script.sh              # Выполняемый файл
+chmod +x script.sh               # Добавить права на выполнение
+chown user:group file.txt        # Изменить владельца и группу
+chmod -R 644 folder/             # Рекурсивное изменение прав
+```
+
+# Процессы и система
+```bash
+top                                # Интерактивный мониторинг процессов
+htop                               # Улучшенный top
+ps aux                             # Все запущенные процессы
+free -h                            # Использование памяти
+df -h                              # Свободное место на дисках
+du -sh *                           # Размер файлов/папок в текущей директории
+```
+
+# Сеть
+```bash
+
+ifconfig                           # Сетевые интерфейсы
+netstat -tulnp                     # Открытые порты
+ping google.com                    # Проверка connectivity
+curl -I example.com                # Заголовки HTTP-ответа
+wget http://example.com/file.zip   # Скачивание файла
+```
